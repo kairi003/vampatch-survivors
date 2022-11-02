@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vampatch Survivors</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" integrity="sha256-rMfkFFWoB2W1/Zx+4bgHim0WC7vKRVrq6FTeZclH1Z4=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js" integrity="sha256-xoh0y6ov0WULfXcLMoaA6nZfszdgI8w2CEJ/3k8NBIE=" crossorigin="anonymous"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Vampatch Survivors</h1>
+    <p>Vampire SurvivorsのスキンMod制作支援ツールです</p>
+  </header>
+  <main>
+    <section>
+      <h3>Base Data</h3>
+      <p>
+        まず同じバージョンの characters.png と characters.json を選択します
+      </p>
+      <p class="form-block file-input">
+        <label for="baseFileInput" class="form-label">characters.png</label>
+        <input type="file" name="base" id="baseFileInput" class="ff" accept="image/png">
+      </p>
+      <p class="form-block file-input">
+        <label for="layoutFileInput" class="form-label">characters.json</label>
+        <input type="file" name="base" id="layoutFileInput" class="form-control" accept="application/json">
+      </p>
+    </section>
+    <section>
+      <h3>Split Images</h3>
+      <p>
+        characters.png から各キャラ画像を切り出します
+      </p>
+      <p class="form-block">
+        <button id="splitButton" class="form-control">Download Splited Images</button>
+      </p>
+    </section>
+    <section>
+      <h3>Apply Custom Skin</h3>
+      <p>
+        Split Images の画像と同じ名前、サイズを以下で選択することで characters.png に適用できます
+      </p>
+      <p class="form-block file-input">
+        <label for="customFileInput" class="form-label">Custom Skins</label>
+        <input type="file" name="base" id="customFileInput" class="form-control" multiple accept="image/png">
+      </p>
+      <p class="form-block">
+        <button id="applyButton" class="form-control" >Download Modded Image</button>
+      </p>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>
